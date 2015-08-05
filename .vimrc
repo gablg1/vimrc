@@ -149,7 +149,7 @@ map <C-i> gt
 
 inoremap jk <esc>
 
-nnoremap <F3> :call ToggleMouse()<CR>
+nnoremap <leader>, :call ToggleMouse()<CR>
 nnoremap k gk
 nnoremap j gj
 nnoremap <leader>n :NERDTreeToggle<CR>

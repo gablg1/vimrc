@@ -1,6 +1,6 @@
 ## Installation:
 
-    git clone git://github.com/gablg1/vimrc.git ~/.vim
+    git clone https://github.com/gablg1/vimrc.git ~/.vim
     ln -s ~/.vim/.vimrc ~/.vimrc
     vim +PluginInstall +qall
 
