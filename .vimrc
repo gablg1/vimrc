@@ -1,32 +1,46 @@
-set nocompatible
 " Vundle stuff
-" Need to turn on then off thanks to silly mac bug
-filetype on
-filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-markdown'
-Bundle 'vim-scripts/Command-T'
-Bundle 'vim-scripts/a.vim'
-Bundle 'scrooloose/nerdtree'
-"Bundle 'Lokaltog/vim-powerline'
-Bundle 'sjl/gundo.vim'
-Bundle 'php.vim--Garvin'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'vim-scripts/coqIDE'
-"Bundle 'rson/vim-conque'
-"Bundle 'rbowden91/ocaml-vim'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'vim-scripts/habiLight'
-Bundle 'jcf/vim-latex'
-"Bundle 'roman/golden-ratio'
-"filetype plugin on
+"Git wrapper"
+"Plugin 'tpope/vim-fugitive'"
+
+"Repeats map as a whole"
+"Plugin 'tpope/vim-repeat'"
+
+"Syntax highlighting and more for Markdown"
+"Plugin 'tpope/vim-markdown'"
+
+"Opening Files mechanism"
+"Plugin 'vim-scripts/Command-T'"
+
+"Switch from .c to .h easily"
+Plugin 'vim-scripts/a.vim'"
+
+"Powerful status line"
+"Plugin 'Lokaltog/vim-powerline'"
+
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sjl/gundo.vim'
+Plugin 'php.vim--Garvin'
+Plugin 'bronson/vim-trailing-whitespace'
+
+Plugin 'vim-scripts/habiLight'
+"Plugin 'roman/golden-ratio'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 " End Vundle stuff
 
 runtime macros/matchit.vim
@@ -44,7 +58,7 @@ set autoindent
 set smartindent
 set copyindent
 set nu
-set shiftwidth=4
+set shiftwidth=2
 set shiftround
 set showmatch
 set ignorecase
@@ -68,29 +82,8 @@ function! ToggleMouse()
     endif
 endfunction
 
-inoremap jk <esc>
 
-nnoremap <F3> :call ToggleMouse()<CR>
-nnoremap k gk
-nnoremap j gj
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <leader>/ :nohlsearch<CR>
-nnoremap <leader>w :FixWhitespace<CR>
-nnoremap <leader>g :GundoToggle<CR>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-map <C-i> gt
-
-" repoen a file at the same line it was on when previously closed
+" reopen a file at the same line it was on when previously closed
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 
@@ -129,3 +122,25 @@ set encoding=utf-8
 set t_Co=256
 colorscheme smyck
 syntax on
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map <C-i> gt
+
+inoremap jk <esc>
+
+nnoremap <F3> :call ToggleMouse()<CR>
+nnoremap k gk
+nnoremap j gj
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+nnoremap <leader>w :FixWhitespace<CR>
+nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
