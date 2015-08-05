@@ -23,18 +23,28 @@ Plugin 'gmarik/Vundle.vim'
 "Opening Files mechanism"
 "Plugin 'vim-scripts/Command-T'"
 
-"Switch from .c to .h easily"
-Plugin 'vim-scripts/a.vim'"
-
 "Powerful status line"
 "Plugin 'Lokaltog/vim-powerline'"
 
+"Switch from .c to .h easily"
+Plugin 'vim-scripts/a.vim'"
+
+"Changes surrounding characters"
 Plugin 'tpope/vim-surround'
+
+"Nerdtree for visualizing file trees"
 Plugin 'scrooloose/nerdtree'
+
+"Visualizes undo history"
 Plugin 'sjl/gundo.vim'
+
+"Adds to the php.vim that ships with vim"
 Plugin 'php.vim--Garvin'
+
+"Removes trailing whitespaces"
 Plugin 'bronson/vim-trailing-whitespace'
 
+"Color scheme for light backgrounds"
 Plugin 'vim-scripts/habiLight'
 "Plugin 'roman/golden-ratio'
 
