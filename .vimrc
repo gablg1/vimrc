@@ -26,6 +26,9 @@ Plugin 'gmarik/Vundle.vim'
 "Powerful status line"
 "Plugin 'Lokaltog/vim-powerline'"
 
+"OCaml toplevel for vim"
+"Plugin 'rbowden91/ocaml-vim'"
+
 "Switch from .c to .h easily"
 Plugin 'vim-scripts/a.vim'"
 
@@ -79,6 +82,7 @@ set incsearch
 set pastetoggle=<F2>
 set mouse=a
 set scrolloff=5
+set ruler
 
 "set virtualedit=all
 
