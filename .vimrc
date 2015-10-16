@@ -5,8 +5,6 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -28,6 +26,12 @@ Plugin 'gmarik/Vundle.vim'
 
 "OCaml toplevel for vim"
 "Plugin 'rbowden91/ocaml-vim'"
+
+"CofeeScript support"
+Plugin 'kchmck/vim-coffee-script'
+
+"CJSX support"
+Plugin 'mtscout6/vim-cjsx'
 
 "Switch from .c to .h easily"
 Plugin 'vim-scripts/a.vim'"
@@ -53,6 +57,7 @@ Plugin 'vim-scripts/habiLight'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+syntax enable
 filetype plugin indent on    " required
 " End Vundle stuff
 
@@ -64,25 +69,25 @@ set visualbell t_vb=
 noremap - ,
 let mapleader=","
 
+set pastetoggle=<leader>p
 set nohidden
-set tabstop=8
 set backspace=indent,eol,start
 set autoindent
-set smartindent
-set copyindent
 set nu
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set shiftround
 set showmatch
 set ignorecase
 set smartcase
-set smarttab
 set hlsearch
 set incsearch
-set pastetoggle=<F2>
 set mouse=a
 set scrolloff=5
 set ruler
+set smartindent
+set copyindent
+set expandtab
 
 "set virtualedit=all
 
@@ -134,8 +139,7 @@ set history=1000
 scriptencoding utf-8
 set encoding=utf-8
 set t_Co=256
-colorscheme smyck
-syntax on
+"colorscheme smyck"
 
 map <up> <nop>
 map <down> <nop>
