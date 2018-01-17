@@ -30,6 +30,9 @@ Plugin 'gmarik/Vundle.vim'
 "CofeeScript support"
 Plugin 'kchmck/vim-coffee-script'
 
+"Typescript support"
+Plugin 'leafgarland/typescript-vim'
+
 "CJSX support"
 Plugin 'mtscout6/vim-cjsx'
 
