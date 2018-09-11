@@ -42,6 +42,8 @@ Plugin 'vim-scripts/a.vim'"
 "Changes surrounding characters"
 Plugin 'tpope/vim-surround'
 
+Plugin 'elixir-editors/vim-elixir'
+
 "Nerdtree for visualizing file trees"
 Plugin 'scrooloose/nerdtree'
 
